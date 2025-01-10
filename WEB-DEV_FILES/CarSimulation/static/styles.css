@@ -1,0 +1,39 @@
+#car-container {
+    display: flex;
+    justify-content: space-evenly; /* Space knobs evenly */
+    align-items: center;
+    position: absolute;
+    bottom: 15px; /* Adjust the distance from the bottom */
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+#controls {
+    margin-top: 310px;
+}
+
+label {
+    margin-right: 10px;
+}
+
+select, .knob, button {
+    margin-bottom: 20px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url('/static/Dashboard.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: rgb(15, 15, 15); /* Adjust text color for visibility */
+}
+
+

@@ -1,0 +1,138 @@
+/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+
+/* Result Container Styling */
+.result-container {
+    width: 80%;
+    max-width: 900px;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #333;
+    box-sizing: border-box;
+}
+
+/* Heading Styles */
+h1 {
+    font-size: 40px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* List Styling for Results */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+li {
+    margin: 15px 0;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+/* Color for Results */
+li:nth-child(odd) {
+    background-color: #ffcc00; /* Gold color */
+    color: #ffffff;
+}
+
+li:nth-child(even) {
+    background-color: #32cd32; /* Lime Green */
+    color: #ffffff;
+}
+
+li:hover {
+    background-color: #555555;
+    color: white;
+}
+
+/* Back Button Styling */
+a.back-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 30px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 2px solid #007BFF;
+    transition: all 0.3s ease;
+}
+
+a.back-button:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    color: white;
+}
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Light background color */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container Styling */
+.container {
+    text-align: center;
+    padding: 30px;
+    background-color: #ffffff; /* White background for the container */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 400px;
+}
+
+/* Title Styling */
+h1 {
+    font-size: 2.5rem;
+    color: #4b0082; /* Deep indigo color */
+    margin-bottom: 20px;
+}
+
+/* Button Styling */
+form button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+}
+
+/* Button Hover Effect */
+form button:hover {
+    background-color: #45a049; /* Darker green */
+}
+
+/* Button Focus Styling */
+form button:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(72, 155, 87, 0.5); /* Light green glow */
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Simulation</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-knob/dist/jquery.knob.min.js"></script>
+</head>
+<body>
+    <div id="car-container">
+        <div id="controls">
+         
+            <label for="speed">Speed:</label>
+            <input type="text" id="speed" class="knob" data-min="0" data-max="255">
+          
+            <label for="distance">Relative Distance:</label>
+            <input type="text" id="distance" class="knob" data-min="0" data-max="127">
+
+            <label for="degree">Relative Degree:</label>
+            <input type="text" id="degree" class="knob" data-min="-60" data-max="60">
+
+            <label for="status">Brake/Turn Status:</label>
+            <select id="status">
+                <option value="brake_next_brake_self">brake_next_brake_self</option>
+                <option value="brake_next_turn_self">brake_next_turn_self</option>
+                <option value="none_next_brake_self">none_next_brake_self</option>
+                <option value="none_next_turn_self">none_next_turn_self</option>
+                <option value="none_none">none_none</option>
+            </select>
+
+            <button id="submit">Save to Excel</button>
+            <button id="stop">Stop Transmission</button>
+
+
+        </div>
+    </div>
+    <script>
+        document.getElementById("submit").addEventListener("click", () => {
+            // Save data to Excel
+            fetch('/save_to_excel', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    speed: document.getElementById('speed').value,
+                    distance: document.getElementById('distance').value,
+                    degree: document.getElementById('degree').value,
+                    status: document.getElementById('status').value
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message);
+                // Automatically send data to UART
+                return fetch('/send_uart', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' }
+                });
+            })
+            .then(response => response.json())
+            .then(data => alert(data.message))
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
+    <script src="/static/script.js"></script>
+</body>
+</html>
