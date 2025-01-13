@@ -55,6 +55,7 @@ This project aims to implement a hardware-based encryption and decryption algori
    - Five distinct output classes were defined for decision-making: Emergency Brake, Speed Up, Slow Down, Lane Change, and No Action.
 
 ---
+![Descriptive Alt Text](https://drive.google.com/uc?id=1NEuPjlfjbPh1DJS7GWiO5n2vGqiyLrAG "Optional Title")
 
 ## Algorithms Involved
 
@@ -77,6 +78,8 @@ This project aims to implement a hardware-based encryption and decryption algori
      - Ki represents the round key derived from the key schedule.
 
 ---
+![Simeck Architecture](https://drive.google.com/uc?id=1r_BPAqmaRdFj4S_NK-vSFgSeTxutAjRd "Hardware Architecture for Simeck Algorithm")
+
 
 ### Decision Tree
 
